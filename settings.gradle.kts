@@ -21,4 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "GmailClone"
 include(":app")
- 
+include(":data")
+include(":domain")
+include(":presentation")
+include(":core")
