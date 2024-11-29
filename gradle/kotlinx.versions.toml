@@ -2,6 +2,7 @@
 kotlin_version = "2.0.20"
 serialization_version = "1.7.3"
 xml_serialization_version = "0.90.2"
+retrofit2KotlinxSerializationConverter = "1.0.0"
 
 [libraries]
 reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin_version" }
@@ -16,6 +17,7 @@ coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-androi
 coroutines-guava = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-guava" }
 coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test" }
 
+
 serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization_version" }
 serialization-json-okio = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json-okio", version.ref = "serialization_version" }
 serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization-protobuf", version.ref = "serialization_version" }
@@ -23,9 +25,11 @@ serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization
 serialization-xml-core = { module = "io.github.pdvrieze.xmlutil:core-android", version.ref = "xml_serialization_version" }
 serialization-xml = { module = "io.github.pdvrieze.xmlutil:serialization-android", version.ref = "xml_serialization_version" }
 
+retrofit2-kotlinx-serialization-converter = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "retrofit2KotlinxSerializationConverter" }
+
 [bundles]
 coroutines = ["coroutines-core", "coroutines-android", "coroutines-guava"]
-serialization = ["serialization-json", "serialization-json-okio", "serialization-protobuf", "serialization-xml-core", "serialization-xml"]
+serialization = ["serialization-json", "serialization-json-okio", "serialization-protobuf", "serialization-xml-core", "serialization-xml", "retrofit2-kotlinx-serialization-converter"]
 
 [plugins]
 android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin_version" }

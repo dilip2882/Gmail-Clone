@@ -20,13 +20,12 @@ dependencies {
 
     implementation(libs.retrofit)
     implementation(libs.logging.interceptor)
-    implementation(libs.retrofit2.kotlinx.serialization.converter)
 
     // Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
-    // Data serialization (JSON, protobuf, xml)
+    // Data serialization (JSON, protobuf, xml, retrofit)
     implementation(kotlinx.bundles.serialization)
 
     implementation(kotlinx.reflect)
