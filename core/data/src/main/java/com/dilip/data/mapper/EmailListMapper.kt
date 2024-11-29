@@ -1,6 +1,6 @@
 package com.dilip.data.mapper
 
-import com.coroutinelab.data.dto.emaillist.EmailListItemDto
+import com.dilip.data.dto.emaillist.EmailListItemDto
 import com.dilip.common.functional.orDefault
 import com.dilip.common.mapper.ResultMapper
 import com.dilip.domain.model.emaillist.EmailListItemModel

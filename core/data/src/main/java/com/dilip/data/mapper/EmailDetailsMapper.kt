@@ -1,8 +1,8 @@
 package com.dilip.data.mapper
 
-import com.coroutinelab.data.dto.emaildetails.EmailDetailsDto
-import com.coroutinelab.data.dto.emaildetails.RecipientInfo
-import com.coroutinelab.data.dto.emaildetails.SenderInfo
+import com.dilip.data.dto.emaildetails.EmailDetailsDto
+import com.dilip.data.dto.emaildetails.RecipientInfo
+import com.dilip.data.dto.emaildetails.SenderInfo
 import com.dilip.common.functional.mapOrDefault
 import com.dilip.common.functional.orDefault
 import com.dilip.common.mapper.ResultMapper
