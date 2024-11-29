@@ -1,27 +1,46 @@
 pluginManagement {
-    repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
+    resolutionStrategy {
+        eachPlugin {
+            val regex = "com.android.(library|application)".toRegex()
+            if (regex matches requested.id.id) {
+                useModule("com.android.tools.build:gradle:${requested.version}")
             }
         }
-        mavenCentral()
-        gradlePluginPortal()
     }
-}
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        gradlePluginPortal()
         google()
         mavenCentral()
+        maven(url = "https://www.jitpack.io")
     }
 }
 
-rootProject.name = "GmailClone"
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("kotlinx") {
+            from(files("gradle/kotlinx.versions.toml"))
+        }
+        create("androidx") {
+            from(files("gradle/androidx.versions.toml"))
+        }
+        create("compose") {
+            from(files("gradle/compose.versions.toml"))
+        }
+    }
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        google()
+        maven(url = "https://www.jitpack.io")
+    }
+}
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+//rootProject.name = "GmailClone"
 include(":app")
-include(":data")
-include(":domain")
-include(":presentation")
-include(":core")
+include(":core:common")
+include(":core:data")
+include(":core:domain")
+include(":core:presentation")
+include(":i18n")
