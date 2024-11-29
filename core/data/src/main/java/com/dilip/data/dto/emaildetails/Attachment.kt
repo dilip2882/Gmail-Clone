@@ -1,4 +1,4 @@
-package com.dilip.data.dto.emaildetails
+package com.coroutinelab.data.dto.emaildetails
 
 
 import kotlinx.serialization.SerialName
@@ -13,5 +13,5 @@ data class Attachment(
     @SerialName("mimeType")
     val mimeType: String?,
     @SerialName("size")
-    val size: Int?
+    val size: Long?
 )

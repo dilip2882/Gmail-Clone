@@ -1,4 +1,4 @@
-package com.dilip.data.dto.emaillist
+package com.coroutinelab.data.dto.emaillist
 
 
 import kotlinx.serialization.SerialName

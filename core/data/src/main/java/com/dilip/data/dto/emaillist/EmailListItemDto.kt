@@ -1,4 +1,4 @@
-package com.dilip.data.dto.emaillist
+package com.coroutinelab.data.dto.emaillist
 
 
 import kotlinx.serialization.SerialName
@@ -15,7 +15,7 @@ data class EmailListItemDto(
     @SerialName("isPromotional")
     val isPromotional: Boolean?,
     @SerialName("payload")
-    val payload: Payload?,
+    val payload: Payload,
     @SerialName("snippet")
     val snippet: String?,
     @SerialName("subject")

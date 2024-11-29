@@ -1,4 +1,4 @@
-package com.dilip.data.dto.emaildetails
+package com.coroutinelab.data.dto.emaildetails
 
 
 import kotlinx.serialization.SerialName
@@ -7,9 +7,9 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class SenderInfo(
     @SerialName("email")
-    val email: String?,
+    val email: String,
     @SerialName("name")
-    val name: String?,
+    val name: String,
     @SerialName("profileImage")
     val profileImage: String?
 )
