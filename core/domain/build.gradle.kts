@@ -1,8 +1,9 @@
 plugins {
     id("dilip.library")
     kotlin("android")
-//    kotlin("plugin.serialization")
-}
+    kotlin("plugin.serialization")
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)}
 
 android {
     namespace = "dilip.core.domain"
@@ -16,6 +17,13 @@ android {
 dependencies {
     implementation(projects.core.common)
 
+    // Hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
+    // Data serialization (JSON, protobuf, xml, retrofit)
+    implementation(kotlinx.bundles.serialization)
+    
     implementation(platform(kotlinx.coroutines.bom))
     implementation(kotlinx.bundles.coroutines)
     implementation(kotlinx.bundles.serialization)
