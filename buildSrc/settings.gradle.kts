@@ -15,4 +15,4 @@ dependencyResolutionManagement {
     }
 }
 
-//rootProject.name = "GmailClone-buildSrc"
+rootProject.name = "GmailClone-buildSrc"

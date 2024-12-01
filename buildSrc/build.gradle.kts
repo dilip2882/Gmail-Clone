@@ -4,6 +4,7 @@ plugins {
 }
 
 dependencies {
+    implementation("com.squareup:javapoet:1.13.0")
     implementation(androidx.gradle)
     implementation(kotlinx.gradle)
     implementation(kotlinx.compose.compiler.gradle)

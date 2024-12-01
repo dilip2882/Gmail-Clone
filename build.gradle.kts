@@ -12,6 +12,8 @@ plugins {
     alias(libs.plugins.firebase.crashlytics) apply false
     alias(libs.plugins.google.services) apply false
     alias(libs.plugins.moko) apply false
+//    alias(libs.plugins.android.library) apply false
+//    alias(libs.plugins.kotlin.android) apply false
 }
 
 tasks.register<Delete>("clean") {

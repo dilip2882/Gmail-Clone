@@ -37,7 +37,7 @@ dependencyResolutionManagement {
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-//rootProject.name = "GmailClone"
+rootProject.name = "GmailClone"
 include(":app")
 include(":core:common")
 include(":core:data")

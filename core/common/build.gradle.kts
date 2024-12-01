@@ -19,9 +19,9 @@ android {
 dependencies {
     implementation(projects.i18n)
 
-    api(kotlinx.coroutines.core)
-    api(kotlinx.serialization.json)
-    api(kotlinx.serialization.json.okio)
+//    api(kotlinx.coroutines.core)
+//    api(kotlinx.serialization.json)
+//    api(kotlinx.serialization.json.okio)
 
     api(libs.preferencektx)
 
